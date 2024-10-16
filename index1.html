@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Dropdown</title>
+
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+    <style>
+        /* Basic reset for styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation bar styling */
+nav ul {
+    list-style-type: none;
+    background-color: #1e293b; /* Dark color for nav background */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Dropdown menu styling */
+#dropdownContent {
+    background-color: #2b3945;
+    padding: 20px;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    width: 300px;
+}
+
+/* Dropdown hidden by default */
+.hidden {
+    display: none;
+}
+
+/* Styling the close button (X) */
+#closeDropdown {
+    float: right;
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+/* Dropdown content links */
+#dropdownContent ul {
+    list-style: none;
+}
+
+#dropdownContent ul li {
+    padding: 10px 0;
+}
+
+#dropdownContent ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar with dropdown links -->
+    <nav>
+        <ul>
+            <!-- Dropdown trigger button -->
+            <li><a href="#" id="tutorialBtn">Tutorials &#9662;</a></li>
+            <li><a href="#">Interview &#9662;</a></li>
+            <li><a href="#">Compiler &#9662;</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dropdown content that appears when user clicks on 'Tutorials' -->
+    <div id="dropdownContent" class="dropdown hidden">
+        <span id="closeDropdown">X</span>
+        <h4>Python</h4>
+        <ul>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Web Technologies</a></li>
+            <li><a href="#">AI, ML, Data Science</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
+    <script>
+        // Get the dropdown elements
+const tutorialBtn = document.getElementById('tutorialBtn');
+const dropdownContent = document.getElementById('dropdownContent');
+const closeDropdown = document.getElementById('closeDropdown');
+
+// When the user clicks on 'Tutorials' button
+tutorialBtn.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent link from navigating
+    dropdownContent.classList.toggle('hidden'); // Toggle visibility of the dropdown
+});
+
+// When the user clicks the 'X' (close button)
+closeDropdown.addEventListener('click', function() {
+    dropdownContent.classList.add('hidden'); // Hide the dropdown when clicked
+});
+
+    </script>
+</body>
+</html>

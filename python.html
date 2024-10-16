@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Tutorial</title>
+
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <style>
+        /* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    line-height: 1.6;
+}
+
+/* Top navigation bar */
+.top-navbar {
+    background-color: #04354b;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+/* Main content container */
+.content-container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Sidebar styling */
+.left-sidebar {
+    width: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.sidebar-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+}
+
+.sidebar-item {
+    margin: 10px 0;
+}
+
+.sidebar-item a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+.sidebar-item a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+.main-content {
+    width: 75%;
+    margin-left: 5%;
+}
+
+.content-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.content-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+header {
+    background-color: #f0f7f8;
+    padding: 20px;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+.dropdown {
+    display: none; /* Hidden by default */
+    background-color: #1b3d42;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+}
+
+.dropdown-content {
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.dropdown-content .categories {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.dropdown-content .categories h4 {
+    margin-bottom: 10px;
+}
+
+.dropdown-content ul {
+    list-style: none;
+}
+
+.dropdown-content ul li {
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hover effect for links */
+nav ul.menu li a:hover,
+.close-btn:hover {
+    color: #007bff;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Top navigation bar -->
+    <header>
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" id="tutorial-link">Tutorials &#9662;</a></li>
+                    <li><a href="#">Interview</a></li>
+                    <li><a href="#">Compiler</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <nav class="top-navbar">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">Python</a></li>
+                <li class="nav-item"><a href="#">Java</a></li>
+                <li class="nav-item"><a href="#">JavaScript</a></li>
+                <li class="nav-item"><a href="#">HTML</a></li>
+                <li class="nav-item"><a href="#">SQL</a></li>
+                <li class="nav-item"><a href="#">PHP</a></li>
+                <li class="nav-item"><a href="#">C#</a></li>
+                <li class="nav-item"><a href="#">C++</a></li>
+                <li class="nav-item"><a href="#">Aptitude</a></li>
+                <li class="nav-item"><a href="#">Reasoning</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="dropdown" id="tutorial-dropdown">
+        <div class="dropdown-content">
+            <button class="close-btn" id="close-tutorial">&times;</button>
+            <h3>Tutorials</h3>
+            <div class="categories">
+                <div>
+                    <h4>Python</h4>
+                    <ul>
+                        <li><a href="python.html">Python</a></li>
+                        <li>Django</li>
+                        <li>Numpy</li>
+                        <li>Pandas</li>
+                        <!-- More links -->
+                    </ul>
+                </div>
+                <div>
+                    <h4>Java</h4>
+                    <ul>
+                        <li>Java</li>
+                        <li>Servlet</li>
+                        <li>JSP</li>
+                        <!-- More links -->
+                    </ul>
+                </div>
+                <div>
+                    <h4>Web Technology</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <!-- More links -->
+                    </ul>
+                </div>
+                <!-- Add more categories as needed -->
+            </div>
+        </div>
+    </div>
+    <!-- Main content wrapper -->
+    <div class="content-container">
+        
+        <!-- Sidebar menu -->
+        <aside class="left-sidebar">
+            <h3 class="sidebar-heading">Python Tutorial</h3>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><a href="#">Python Tutorial</a></li>
+                <li class="sidebar-item"><a href="#">Python Features</a></li>
+                <li class="sidebar-item"><a href="#">Python History</a></li>
+                <li class="sidebar-item"><a href="#">Python Applications</a></li>
+                <li class="sidebar-item"><a href="#">Python Install</a></li>
+                <li class="sidebar-item"><a href="#">Python Example</a></li>
+                <li class="sidebar-item"><a href="#">Python Variables</a></li>
+                <li class="sidebar-item"><a href="#">Python Data Types</a></li>
+                <li class="sidebar-item"><a href="#">Python Keywords</a></li>
+                <li class="sidebar-item"><a href="#">Python Literals</a></li>
+                <li class="sidebar-item"><a href="#">Python Operators</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="main-content">
+            <h1 class="content-title">Python Tutorial | Python Programming Language</h1>
+            <p class="content-description">
+                Python is a widely used programming language that offers several unique features and advantages...
+            </p>
+            <!-- Add your content here -->
+        </main>
+
+    </div>
+
+    <script>
+        document.getElementById("tutorial-link").addEventListener("click", function(e) {
+    e.preventDefault(); // Prevent default link behavior
+    document.getElementById("tutorial-dropdown").style.display = "block"; // Show dropdown
+});
+
+document.getElementById("close-tutorial").addEventListener("click", function() {
+    document.getElementById("tutorial-dropdown").style.display = "none"; // Hide dropdown
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header and menu */
+header {
+    background-color: #f0f7f8;
+    padding: 20px;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* Dropdown content */
+.dropdown {
+    display: none; /* Hidden by default */
+    background-color: #1b3d42;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+}
+
+.dropdown-content {
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.dropdown-content .categories {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.dropdown-content .categories h4 {
+    margin-bottom: 10px;
+}
+
+.dropdown-content ul {
+    list-style: none;
+}
+
+.dropdown-content ul li {
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hover effect for links */
+nav ul.menu li a:hover,
+.close-btn:hover {
+    color: #007bff;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#" id="tutorial-link">Tutorials &#9662;</a></li>
+                <li><a href="#">Interview</a></li>
+                <li><a href="#">Compiler</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dropdown" id="tutorial-dropdown">
+        <div class="dropdown-content">
+            <button class="close-btn" id="close-tutorial">&times;</button>
+            <h3>Tutorials</h3>
+            <div class="categories">
+                <div>
+                    <h4>Python</h4>
+                    <ul>
+                        <li><a href="python.html">Python</a></li>
+                        <li>Django</li>
+                        <li>Numpy</li>
+                        <li>Pandas</li>
+                        <!-- More links -->
+                    </ul>
+                </div>
+                <div>
+                    <h4>Java</h4>
+                    <ul>
+                        <li>Java</li>
+                        <li>Servlet</li>
+                        <li>JSP</li>
+                        <!-- More links -->
+                    </ul>
+                </div>
+                <div>
+                    <h4>Web Technology</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <!-- More links -->
+                    </ul>
+                </div>
+                <!-- Add more categories as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.getElementById("tutorial-link").addEventListener("click", function(e) {
+    e.preventDefault(); // Prevent default link behavior
+    document.getElementById("tutorial-dropdown").style.display = "block"; // Show dropdown
+});
+
+document.getElementById("close-tutorial").addEventListener("click", function() {
+    document.getElementById("tutorial-dropdown").style.display = "none"; // Hide dropdown
+});
+
+    </script>
+</body>
+</html>

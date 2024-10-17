@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Menu</title>
+    <title>Shorat innovation</title>
 
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -94,17 +94,17 @@ nav ul.menu li a:hover,
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="#" id="tutorial-link">Tutorials &#9662;</a></li>
-                <li><a href="#">Interview</a></li>
-                <li><a href="#">Compiler</a></li>
+                <li><a href="#" id="course-link">Courses &#9662;</a></li>
+                <li><a href="#" id="interview-link">Interview &#9662;</a></li>
+                <li><a href="#">Certificate &#9662;</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="dropdown" id="tutorial-dropdown">
+    <div class="dropdown" id="course-dropdown">
         <div class="dropdown-content">
-            <button class="close-btn" id="close-tutorial">&times;</button>
-            <h3>Tutorials</h3>
+            <button class="close-btn" id="close-course">&times;</button>
+            <h3></h3>
             <div class="categories">
                 <div>
                     <h4>Python</h4>
@@ -113,15 +113,26 @@ nav ul.menu li a:hover,
                         <li>Django</li>
                         <li>Numpy</li>
                         <li>Pandas</li>
+                        <li>Tkinter</li>
+                        <li>pytorch</li>
+                        <li>Flask</li>
+                        <li>OpenCv</li>
+                        
                         <!-- More links -->
                     </ul>
                 </div>
                 <div>
                     <h4>Java</h4>
                     <ul>
-                        <li>Java</li>
+                        <li><a herf="java.html"></a>Java</li>
                         <li>Servlet</li>
                         <li>JSP</li>
+                        <li>Spring Boot</li>
+                        <li>Spring Fremework</li>
+                        <li>Hibernate</li>
+                        <li>JavaFX</li>
+                        <li>Java Web Services</li>
+                        
                         <!-- More links -->
                     </ul>
                 </div>
@@ -131,6 +142,9 @@ nav ul.menu li a:hover,
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JavaScript</li>
+                        <li>Angular</li>
+                        <li>React Native</li>
+                        <li>Node Js</li>
                         <!-- More links -->
                     </ul>
                 </div>
@@ -139,17 +153,145 @@ nav ul.menu li a:hover,
         </div>
     </div>
 
+
+
+
+    
+
+    <div class="dropdown" id="interview-dropdown">
+        <div class="dropdown-content">
+            <button class="close-btn" id="close-interview">&times;</button>
+            <h3></h3>
+            <div class="categories">
+                <div>
+
+                    <h2>Technical Interview</h2>
+                    <ul>
+
+
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>C++</li>
+                        <li>Php</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+
+                        <h2>Java Interview</h2>
+                        <li>JDBC</li>
+                        <li>Servlet</li>
+                        <li>Maven</li>
+                        <li>Jenkins</li>
+                        <li>Spring</li>
+                        <li>Spring Boot</li>
+                        <li>JDB</li>
+                        <li>Hibernate</li>
+                        <li>JSF</li>
+
+
+                        
+                        <!-- More links -->
+                    </ul>
+                </div>
+                <div>
+                    <h2>Web Interview</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Jquery</li>
+                        <li>Angular</li>
+                        <li>Node-JS</li>
+                        <li>AJAX</li>
+                        <h2>Database Interview</h2>
+
+                        <li>DBMS</li>
+                        <li>SQL</li>
+                        <li>PL/SQL</li>
+                        <li>Oracle</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>Redis</li>
+                        <li>MariaDB</li>
+                       
+                        
+                    </ul>
+                    
+                </div>
+                <div>
+                    <h2>Company Interviews</h2>
+                    <ul>
+                        <li>IBM</li>
+                        <li>Adobe</li>
+                        <li>Microsoft</li>
+                        <li>Amazon</li>
+                        <li>TCS</li>
+                        <li>HCL</li>
+                        <li>Wipro</li>
+                        <li>DXC</li>
+                        <li>Accenture</li>
+                        <li>Capgemimni</li>
+                        <li>Space X</li>
+                        <li>Ericsson</li>
+                        <li>Infosy</li>
+                        <li>IGate</li>
+                        <li>EXL</li>
+                        <li>indiaMART</li>
+                        <li>Sapient</li>
+                        
+
+                        <!-- More links -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+     <main>
+        <section id="hero">
+            <h4> online Courses</h4>
+            <h2>Discover Your Journey With Us</h2>
+                <p>Get access to 500+ Tutorials from top instructors around he world in place.</p>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+    
+
     <script src="scripts.js"></script>
     <script>
-        document.getElementById("tutorial-link").addEventListener("click", function(e) {
+        document.getElementById("course-link").addEventListener("click", function(e) {
     e.preventDefault(); // Prevent default link behavior
-    document.getElementById("tutorial-dropdown").style.display = "block"; // Show dropdown
+    document.getElementById("course-dropdown").style.display = "block"; // Show dropdown
 });
 
-document.getElementById("close-tutorial").addEventListener("click", function() {
-    document.getElementById("tutorial-dropdown").style.display = "none"; // Hide dropdown
+document.getElementById("close-course").addEventListener("click", function() {
+    document.getElementById("course-dropdown").style.display = "none"; // Hide dropdown
 });
 
     </script>
+
+    <script>
+    document.getElementById("interview-link").addEventListener("click", function(e) {
+e.preventDefault(); // Prevent default link behavior
+document.getElementById("interview-dropdown").style.display = "block"; // Show dropdown
+});
+
+document.getElementById("close-interview").addEventListener("click", function() {
+document.getElementById("interview-dropdown").style.display = "none"; // Hide dropdown
+});
+
+</script>
 </body>
 </html>
